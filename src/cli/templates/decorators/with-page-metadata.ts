@@ -28,7 +28,7 @@ export const tplDynamicForDynamicRoute = `
 import {generateMetadata as generateMetadataOrigin} from '${PATTERNS.originPath}'
 
 export async function generateMetadata({ params, ...otherProps }:any) {
-  return generateMetadataOrigin({ ...otherProps, params, pageHref: compileHref('${PATTERNS.pageHref}', params) })
+  return generateMetadataOrigin({ ...otherProps, params, pageHref: compileHref('${PATTERNS.pageHref}', await params) })
 }
 `
 

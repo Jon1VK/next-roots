@@ -28,7 +28,7 @@ export const tplDynamicForDynamicRoute = `
 import {generateViewport as generateViewportOrigin} from '${PATTERNS.originPath}'
 
 export function generateViewport({ params, searchParams, ...otherProps }:any) {
-  return generateViewportOrigin({ ...otherProps, params, searchParams, pageHref: compileHref('${PATTERNS.pageHref}') })
+  return generateViewportOrigin({ ...otherProps, params, searchParams, pageHref: compileHref('${PATTERNS.pageHref}', await params) })
 }
 `
 

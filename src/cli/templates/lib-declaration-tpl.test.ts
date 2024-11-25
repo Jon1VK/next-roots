@@ -109,8 +109,8 @@ export function compileHref(href: string, params: Record<string, string>): strin
 export function formatHref(href: string, params: Record<string, string>): string
 
 export type PageProps<TParams = void> = TParams extends void
-  ? { pageHref: string }
-  : { pageHref: string; params: TParams }
+  ? { locale: RouteLocale }
+  : { locale: RouteLocale; params: TParams }
 export type LayoutProps<TParams = any> = { locale: string, params: TParams }
 export type GeneratePageMetadataProps<TParams = any> = { pageHref: string, params: TParams }
 export type GenerateLayoutMetadataProps<TParams = any> = { locale: string, params: TParams }
@@ -187,8 +187,8 @@ export function compileHref(href: string, params: Record<string, string>): strin
 export function formatHref(href: string, params: Record<string, string>): string
 
 export type PageProps<TParams = void> = TParams extends void
-  ? { pageHref: string }
-  : { pageHref: string; params: TParams }
+  ? { locale: RouteLocale }
+  : { locale: RouteLocale; params: TParams }
 export type LayoutProps<TParams = any> = { locale: string, params: TParams }
 export type GeneratePageMetadataProps<TParams = any> = { pageHref: string, params: TParams }
 export type GenerateLayoutMetadataProps<TParams = any> = { locale: string, params: TParams }
